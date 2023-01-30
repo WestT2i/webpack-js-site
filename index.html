@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product's - JS</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="container">
+
+                <div class="logo">
+                    <h1>Product's</h1>
+                </div>
+
+                <div class="menu">
+                    <button type="button" class="products-menu-btn">Продукты</button>
+                    <button type="button" class="clients-menu-btn">Клиенты</button>
+                    <button type="button" class="orders-menu-btn">Заказы</button>
+                </div>
+
+                <div class="exit">
+                    <button type="button" class="exit-btn">Выход</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="container">
+
+                <div class="products" style="display: block;">
+                    <div class="products-header">
+                        <h1>Продукты</h1>
+                        <button type="button" id="add-product">Добавить товар</button>
+                    </div>
+
+                    <div class="modal-product">
+                        <div class="modal__box">
+                            <form id="add-product-form">
+                                <div class="form-header">
+                                    <h1>Добавление товара</h1>
+                                    <button type="button" id="close-product">✕</button>
+                                </div>
+                                <div class="form-main">
+                                    <input type="text" id="add-product-name" placeholder="Название товара">
+                                    <input type="number" id="add-product-price" placeholder="Цена товара">
+                                    <button id="add-product-btn">Добавить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="products-list"></div>
+                </div>
+
+                <div class="clients" style="display: none;">
+                    <div class="clients-header">
+                        <h1>Клиенты</h1>
+                        <button type="button" id="add-client">Добавить клиента</button>
+                    </div>
+
+                    <div class="modal-client">
+                        <div class="modal__box">
+                            <form id="add-client-form">
+                                <div class="form-header">
+                                    <h1>Добавление клиента</h1>
+                                    <button type="button" id="close-client">✕</button>
+                                </div>
+                                <div class="form-main">
+                                    <input type="text" id="add-client-name" placeholder="Имя">
+                                    <input type="number" id="add-client-number" placeholder="Номер">
+                                    <button id="add-client-btn">Добавить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="clients-list"></div>
+                </div>
+
+                <div class="orders" style="display: none;">
+                    <div class="orders-header">
+                        <h1>Заказы</h1>
+                        <button type="button" id="add-order">Добавить заказ</button>
+                    </div>
+
+                    <div class="modal-order">
+                        <div class="modal__box">
+                            <form id="add-order-form">
+                                <div class="form-header">
+                                    <h1>Добавление заказа</h1>
+                                    <button type="button" id="close-order">✕</button>
+                                </div>
+                                <div class="form-main">
+                                    <select id="select-order-name"></select>
+                                    <button type="button" id="next-order-btn">Далее</button>
+                                    <select id="select-order-product" style="display: none;"></select>
+                                    <input type="number" id="input-order-amount" placeholder="Количество"
+                                        style="display: none;">
+                                    <button type="button" id="add-order-btn" style="display: none;">Добавить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="orders-list"></div>
+                </div>
+
+</body>
+
+</html>

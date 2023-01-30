@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #fff;
+  width: 200px;
+  padding: 35px;
+}
+
+.sidebar .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  color: #009688;
+}
+
+.menu {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+  margin-top: 70px;
+}
+
+.main {
+  width: 100%;
+  padding: 35px;
+}
+
+.products-menu-btn,
+.clients-menu-btn,
+.orders-menu-btn,
+.exit-btn {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #909090;
+  transition: 0.2s;
+}
+
+.products-menu-btn:hover,
+.clients-menu-btn:hover,
+.orders-menu-btn:hover,
+.exit-btn:hover {
+  color: #303030;
+}
+
+.modal-product,
+.modal-client,
+.modal-order {
+  position: fixed;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s visibility 0.4s;
+}
+
+.modal-product.open,
+.modal-client.open,
+.modal-order.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__box {
+  width: 400px;
+  padding: 35px;
+  margin: 35px;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.2);
+}
+
+.products-header,
+.clients-header,
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+#add-product,
+#add-client,
+#add-order {
+  background: #009688;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#add-product:hover,
+#add-client:hover,
+#add-order:hover {
+  background: #00b1a0;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+#close-product,
+#close-client,
+#close-order {
+  background: transparent;
+  color: #009688;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+#close-product:hover,
+#close-client:hover,
+#close-order:hover {
+  color: #00b1a0;
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-main input,
+.form-main select {
+  border: none;
+  padding: 10px 12px;
+  background: #f1f1f1;
+}
+
+#add-product-btn,
+#add-client-btn,
+#next-order-btn,
+#add-order-btn {
+  border: none;
+  width: fit-content;
+  padding: 10px 12px;
+  background-color: #009688;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#add-product-btn:hover,
+#add-client-btn:hover,
+#next-order-btn:hover,
+#add-order-btn:hover {
+  background-color: #00b1a0;
+}
+
+#products-list,
+#clients-list,
+#orders-list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.product,
+.client,
+.order {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.product-info,
+.client-info,
+.order-info {
+  padding: 15px;
+}
+
+.product-delete-btn,
+.client-delete-btn,
+.order-delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 0 20px;
+}
+
+.product-delete-btn:hover,
+.client-delete-btn:hover,
+.order-delete-btn:hover {
+  background: #009688;
+  color: white;
+}
